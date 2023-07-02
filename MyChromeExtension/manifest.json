@@ -3,7 +3,7 @@
     "name": "Twitter Auto Scroller",
     "version": "1.0",
     "description": "Automatically scrolls and refreshes Twitter timeline.",
-    "permissions": ["activeTab", "storage", "https://twitter.com/*"],
+    "permissions": ["activeTab", "storage"],
     "background": {
         "service_worker": "src/background/background.js"
     },
@@ -17,7 +17,7 @@
     "content_scripts": [
         {
             "matches": ["https://twitter.com/*"],
-            "js": ["src/contentScript.js"]
+            "js": ["src/content/content.js"]
         }
     ],
     "host_permissions": [
