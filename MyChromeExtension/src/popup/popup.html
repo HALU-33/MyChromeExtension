@@ -2,26 +2,21 @@
 <html>
 <head>
     <title>Twitter Auto Scroller Settings</title>
-    <!-- style.cssという外部CSSファイルをリンク -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- style.cssをリンク -->
 </head>
 <body>
     <div id="scrollSpeedDiv">
-        <!-- ユーザーがスクロール速度を入力するためのフィールドを作成 -->
-        <label for="scrollSpeed">Scroll speed:</label>
-        <input type="number" id="scrollSpeed">
+        <label for="scrollSpeed">Scroll speed:</label> <!-- スクロール速度のラベルを追加 -->
+        <input type="number" id="scrollSpeed"> <!-- スクロール速度を入力するフィールドを追加 -->
     </div>
 
     <div id="refreshIntervalDiv">
-        <!-- ユーザーが更新間隔を入力するためのフィールドを作成 -->
-        <label for="refreshInterval">Refresh interval (minutes):</label>
-        <input type="number" id="refreshInterval">
+        <label for="refreshInterval">Refresh interval (minutes):</label> <!-- 更新間隔のラベルを追加 -->
+        <input type="number" id="refreshInterval"> <!-- 更新間隔を入力するフィールドを追加 -->
     </div>
 
-    <!-- 保存ボタンを作成 -->
-    <button id="save">Save</button>
+    <button id="save">Save</button> <!-- 保存ボタンを追加 -->
 
-    <!-- ポップアップスクリプトをリンク -->
-    <script src="popup.js"></script>
+    <script src="popup.js"></script> <!-- popup.jsをリンク -->
 </body>
 </html>
