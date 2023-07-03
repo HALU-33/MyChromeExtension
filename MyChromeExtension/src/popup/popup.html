@@ -6,13 +6,19 @@
 </head>
 <body>
     <div id="scrollSpeedDiv">
+        <label for="scrollEnabled">Enable scroll:</label> <!-- スクロール有効化のラベルを追加 -->
+        <input type="checkbox" id="scrollEnabled"> <!-- スクロール有効化のチェックボックスを追加 -->
+
         <label for="scrollSpeed">Scroll speed:</label> <!-- スクロール速度のラベルを追加 -->
-        <input type="number" id="scrollSpeed"> <!-- スクロール速度を入力するフィールドを追加 -->
+        <input type="number" id="scrollSpeed" disabled> <!-- スクロール速度を入力するフィールドを追加（デフォルトで無効化） -->
     </div>
 
     <div id="refreshIntervalDiv">
+        <label for="refreshEnabled">Enable refresh:</label> <!-- リフレッシュ有効化のラベルを追加 -->
+        <input type="checkbox" id="refreshEnabled"> <!-- リフレッシュ有効化のチェックボックスを追加 -->
+
         <label for="refreshInterval">Refresh interval (minutes):</label> <!-- 更新間隔のラベルを追加 -->
-        <input type="number" id="refreshInterval"> <!-- 更新間隔を入力するフィールドを追加 -->
+        <input type="number" id="refreshInterval" disabled> <!-- 更新間隔を入力するフィールドを追加（デフォルトで無効化） -->
     </div>
 
     <button id="save">Save</button> <!-- 保存ボタンを追加 -->
