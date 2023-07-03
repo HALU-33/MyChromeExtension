@@ -16,7 +16,12 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://twitter.com/*"],
+            "matches": [
+                "https://twitter.com/home*",
+                "https://twitter.com/*/status/*",
+                "https://twitter.com/*/with_replies",
+                "https://twitter.com/search?q=*"
+            ],
             "js": ["src/content/content.js"]
         }
     ],

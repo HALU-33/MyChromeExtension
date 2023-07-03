@@ -3,7 +3,7 @@
     "name": "Twitter Auto Scroller", // 拡張機能の名前を設定。
     "version": "1.0", // 拡張機能のバージョン番号を設定。
     "description": "Automatically scrolls and refreshes Twitter timeline.", // 拡張機能の説明を設定。
-    "permissions": ["activeTab", "storage", "https://twitter.com/*"], // 必要な権限を設定。activeTabとstorageへのアクセス、およびtwitter.comのURLへのアクセスを許可。
+    "permissions": ["activeTab", "storage"], // 必要な権限を設定。activeTabとstorageへのアクセスを許可。
     "background": {
         "service_worker": "src/background/background.js" // サービスワーカーとして実行されるバックグラウンドスクリプトを設定。
     },
@@ -16,8 +16,13 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://twitter.com/*"], // content_scriptsが実行されるURLパターンを設定。
-            "js": ["src/contentScript.js"] // Twitterのページで実行されるコンテンツスクリプトを設定。
+            "matches": [
+                "https://twitter.com/home*", // ホームタイムラインのURLに一致
+                "https://twitter.com/*/status/*", // 個々のツイートページのURLに一致
+                "https://twitter.com/*/with_replies", // ユーザーの「ツイート＆リプライ」タブのURLに一致
+                "https://twitter.com/search?q=*" // 検索結果ページのURLに一致
+            ], // content_scriptsが実行されるURLパターンを設定。
+            "js": ["src/content/content.js"] // Twitterの特定のページで実行されるコンテンツスクリプトを設定。
         }
     ],
     "host_permissions": [
