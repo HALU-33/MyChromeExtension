@@ -1,0 +1,15 @@
+/* ポップアップ全体のスタイルを設定 */
+body {
+    width: 200px; /* ポップアップの幅を200pxに設定 */
+    padding: 10px; /* ポップアップ内の要素との間に余白を設定 */
+}
+
+/* 各セクションのスタイルを設定 */
+#scrollToggleSection, #refreshToggleSection {
+    margin-bottom: 10px; /* 各セクションの下に余白を設定 */
+}
+
+/* 詳細設定ページへのリンクのスタイルを設定 */
+#advancedSettingsLink {
+    text-align: center; /* リンクを中央寄せにする */
+}
