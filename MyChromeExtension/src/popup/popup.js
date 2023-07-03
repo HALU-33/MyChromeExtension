@@ -1,3 +1,13 @@
+// 拡張機能がインストールされたときに初期設定を保存
+chrome.runtime.onInstalled.addListener(function() {
+  chrome.storage.sync.set({
+    scrollEnabled: false,
+    refreshEnabled: false,
+    scrollSpeed: 0,
+    refreshInterval: 0
+  });
+});
+
 // 保存ボタンにクリックイベントリスナーを追加
 document.getElementById('save').addEventListener('click', function() {
   // チェックボックスと数値入力フィールドから値を取得
@@ -23,8 +33,8 @@ window.onload = function() {
     // ストレージから取得した設定値をフォームに適用
     document.getElementById('scrollEnabled').checked = result.scrollEnabled;
     document.getElementById('refreshEnabled').checked = result.refreshEnabled;
-    document.getElementById('scrollSpeed').value = result.scrollSpeed;
-    document.getElementById('refreshInterval').value = result.refreshInterval;
+    document.getElementById('scrollSpeed').value = result.scrollSpeed || '';
+    document.getElementById('refreshInterval').value = result.refreshInterval || '';
 
     // チェックボックスの状態に応じて数値入力フィールドの有効・無効を設定
     document.getElementById('scrollSpeed').disabled = !result.scrollEnabled;
