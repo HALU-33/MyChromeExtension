@@ -1,4 +1,4 @@
-# HALU-33.github.io - MyChromeExtension
+# MyChromeExtension - GoogleChrome 自作拡張機能
 
 このREADMEは、JavaScriptとGoogle Chrome拡張機能の学習の一環として作成した拡張機能の技術メモ。備忘録として分かりやすく解説。
 
