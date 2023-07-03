@@ -7,14 +7,22 @@ chrome.storage.sync.get(['scrollSpeed', 'refreshInterval', 'scrollEnabled', 'ref
     refreshInterval = result.refreshInterval;
     scrollEnabled = result.scrollEnabled;
     refreshEnabled = result.refreshEnabled;
+
+    // スクロールが有効な場合、アニメーションを開始
+    if (scrollEnabled) {
+        requestAnimationFrame(scrollSmoothly);
+    }
 });
 
-// 1秒ごとにページを指定したピクセルだけスクロールするように設定（スクロールが有効な場合のみ）
-setInterval(function() {
+// 滑らかにスクロールするための関数
+function scrollSmoothly(timestamp) {
     if (scrollEnabled) {
-        window.scrollBy(0, scrollSpeed);
+        // 指定した速度でスクロール
+        window.scrollBy(0, scrollSpeed / 60); // 60fpsを想定して速度を調整
+        // 次のフレームで再度この関数を呼び出す
+        requestAnimationFrame(scrollSmoothly);
     }
-}, 1000);
+}
 
 // 指定した間隔でページをリロードするように設定（リロードが有効な場合のみ）
 setInterval(function() {
