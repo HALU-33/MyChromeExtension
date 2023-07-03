@@ -1,13 +1,14 @@
 # MyChromeExtension - GoogleChrome 自作拡張機能
 
-このREADMEは、JavaScriptとGoogle Chrome拡張機能の学習の一環として作成した拡張機能の技術メモ。備忘録として分かりやすく解説。
+このREADMEは、JavaScriptとGoogle Chrome拡張機能の学習の一環として作成した拡張機能の備忘録。
 
 ## 目次
-- manifest.json
-- background.js
-- content.js
-- popup.html
-- popup.js
+- [manifest.json](#manifestjson)
+- [background.js](#backgroundjs)
+- [content.js](#contentjs)
+- [popup.html](#popuphtml)
+- [popup.js](#popupjs)
+
 
 ## manifest.json
 manifest.jsonは、拡張機能のメタデータを定義するJSONファイル。
