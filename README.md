@@ -2,6 +2,8 @@
 
 このREADMEは、JavaScriptとGoogle Chrome拡張機能の学習の一環として作成した拡張機能の備忘録。
 
+今回作成した自作拡張機能は、Twitterのタイムラインの自動スクロールと自動更新をする拡張機能である。
+
 ## 目次
 - [manifest.json](#manifestjson)
 - [background.js](#backgroundjs)
