@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Twitter Auto Scroller Settings</title>
-    <link rel="stylesheet" type="text/css" href="style.css"> <!-- style.cssをリンク -->
+    <title>Twitter Auto Scroller</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id="scrollSpeedDiv">
-        <label for="scrollEnabled">Enable scroll:</label> <!-- スクロール有効化のラベルを追加 -->
-        <input type="checkbox" id="scrollEnabled"> <!-- スクロール有効化のチェックボックスを追加 -->
-
-        <label for="scrollSpeed">Scroll speed:</label> <!-- スクロール速度のラベルを追加 -->
-        <input type="number" id="scrollSpeed" disabled> <!-- スクロール速度を入力するフィールドを追加（デフォルトで無効化） -->
+    <!-- スクロールのトグルボタンのセクション -->
+    <div id="scrollToggleSection">
+        <!-- スクロールの有効/無効を切り替えるチェックボックス -->
+        <label for="toggleScroll">Enable scroll:</label>
+        <input type="checkbox" id="toggleScroll">
     </div>
 
-    <div id="refreshIntervalDiv">
-        <label for="refreshEnabled">Enable refresh:</label> <!-- リフレッシュ有効化のラベルを追加 -->
-        <input type="checkbox" id="refreshEnabled"> <!-- リフレッシュ有効化のチェックボックスを追加 -->
-
-        <label for="refreshInterval">Refresh interval (minutes):</label> <!-- 更新間隔のラベルを追加 -->
-        <input type="number" id="refreshInterval" disabled> <!-- 更新間隔を入力するフィールドを追加（デフォルトで無効化） -->
+    <!-- リフレッシュのトグルボタンのセクション -->
+    <div id="refreshToggleSection">
+        <!-- リフレッシュの有効/無効を切り替えるチェックボックス -->
+        <label for="toggleRefresh">Enable refresh:</label>
+        <input type="checkbox" id="toggleRefresh">
     </div>
 
-    <button id="save">Save</button> <!-- 保存ボタンを追加 -->
+    <!-- 詳細設定ページへのリンク -->
+    <div id="advancedSettingsLink">
+        <a href="../options/options.html" target="_blank">Advanced Settings</a>
+    </div>
 
-    <script src="popup.js"></script> <!-- popup.jsをリンク -->
+    <!-- ポップアップのスクリプト -->
+    <script src="popup.js"></script>
 </body>
 </html>

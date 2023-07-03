@@ -11,6 +11,7 @@
         "default_popup": "src/popup/popup.html",
         "default_title": "Twitterを自動スクロール"
     },
+    "options_page": "src/options/options.html",
     "icons": {
         "48": "img/Icon_twitter.png"
     },
