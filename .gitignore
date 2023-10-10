@@ -1,0 +1,6 @@
+# Chrome拡張関連
+*.crx
+*.pem
+
+# その他の不要なファイル
+.DS_Store
