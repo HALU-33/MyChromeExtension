@@ -9,7 +9,7 @@ document.getElementById('save').addEventListener('click', function() {
         scrollSpeed: scrollSpeed,
         refreshInterval: refreshInterval
     }, function() {
-        console.log('Settings saved'); // 設定が保存されたことをコンソールに出力
+        console.log('Settings saved');
     });
 });
 

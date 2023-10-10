@@ -6,10 +6,10 @@ body {
 
 /* 各セクションのスタイルを設定 */
 #scrollToggleSection, #refreshToggleSection {
-    margin-bottom: 10px; /* 各セクションの下に余白を設定 */
+    margin-bottom: 10px;
 }
 
 /* 詳細設定ページへのリンクのスタイルを設定 */
 #advancedSettingsLink {
-    text-align: center; /* リンクを中央寄せにする */
+    text-align: center;
 }

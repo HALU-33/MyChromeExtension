@@ -1,5 +1,5 @@
-var scrollSpeed, refreshInterval; // スクロール速度と更新間隔を格納する変数を宣言
-var scrollEnabled, refreshEnabled; // スクロールと更新のオン・オフ状態を格納する変数を宣言
+var scrollSpeed, refreshInterval; // スクロール速度と更新間隔を格納する変数
+var scrollEnabled, refreshEnabled; // スクロールと更新のオン・オフ状態を格納する変数
 
 // ストレージから設定値を取得
 chrome.storage.sync.get(['scrollSpeed', 'refreshInterval', 'scrollEnabled', 'refreshEnabled'], function(result) {
@@ -18,8 +18,7 @@ chrome.storage.sync.get(['scrollSpeed', 'refreshInterval', 'scrollEnabled', 'ref
 function scrollSmoothly(timestamp) {
     if (scrollEnabled) {
         // 指定した速度でスクロール
-        window.scrollBy(0, scrollSpeed / 60); // 60fpsを想定して速度を調整
-        // 次のフレームで再度この関数を呼び出す
+        window.scrollBy(0, scrollSpeed / 60);
         requestAnimationFrame(scrollSmoothly);
     }
 }
